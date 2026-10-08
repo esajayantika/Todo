@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script href="script.js"></script>
+    <script src="script.js"></script>
     <title>to-do</title>
   </head>
   <body>
     <h1>What To Do Today?</h1>
-    <form action="">
+    <form>
       <textarea name="todo" id="todo"></textarea>
-      <button type="submit">Add Activity</button>
+      <div class="urgency">
+        <input type="radio" />
+        <label for="high">High</label>
+        <input type="radio" />
+        <label for="medium">Medium</label>
+        <input type="radio" />
+        <label for="low">Low</label>
+      </div>
+      <button class="btn-addactivity" type="submit">Add Activity</button>
     </form>
 
-    <div class="todo-list">this is to do list</div>
+    <div class="todo-list"></div>
   </body>
 </html>
