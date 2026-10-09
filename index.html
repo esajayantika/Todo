@@ -8,19 +8,37 @@
   </head>
   <body>
     <h1>What To Do Today?</h1>
+    <h3>Profile</h3>
+    <div class="profile">
+      <p>Name : I Putu Esa Jayantika</p>
+      <p>Position : CEO</p>
+    </div>
+    <div class="time">
+      <strong>Today :</strong>
+      <span id="live-clock">Loading live date...</span>
+    </div>
     <form>
+      <label for="todo">Add New Task :</label> <br />
       <textarea name="todo" id="todo"></textarea>
-      <div class="urgency">
-        <input type="radio" />
-        <label for="high">High</label>
-        <input type="radio" />
-        <label for="medium">Medium</label>
-        <input type="radio" />
-        <label for="low">Low</label>
+
+      <div class="datetodo">
+        When to Do?
+        <input type="date" id="dateinput" />
       </div>
-      <button class="btn-addactivity" type="submit">Add Activity</button>
+      <div class="urgency">
+        <span>Priority :</span>
+        <input id="priorhigh" type="radio" name="priority" value="High" />
+        <label for="priorhigh">High</label>
+
+        <input id="priormed" type="radio" name="priority" value="Medium" />
+        <label for="priormed">Medium</label>
+
+        <input id="priorlow" type="radio" name="priority" value="Low" />
+        <label for="priorlow">Low</label>
+      </div>
+      <button id="btn-addactivity" type="submit">Add Activity</button>
     </form>
 
-    <div class="todo-list"></div>
+    <div class="todo-list">This is your To Do List</div>
   </body>
 </html>
