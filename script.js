@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const addTodo = document.getElementById("btn-addactivity");
   const datedata = document.getElementById("dateinput");
   const todoList = document.querySelector(".todo-list");
+  const doneList = document.querySelector(".done-list");
+  const delTodo = document.getElementById("btn-delall");
 
   //format date reusable
   const options = {
@@ -64,5 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
     todo.value = "";
     priorBtn.checked = false;
     datedata.value = "";
+  });
+
+  // pointing tombol del all kemudian hapus semua class .todo-data
+  delTodo.addEventListener("click", function () {
+    document.querySelectorAll(".todo-data").forEach((card) => card.remove());
   });
 });

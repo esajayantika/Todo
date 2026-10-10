@@ -1,0 +1,9 @@
+.todo-data {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+/* kalau klik check box maka data todo kecoret */
+.todo-data.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
