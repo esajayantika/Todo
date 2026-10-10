@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js"></script>
+    <script src="todolist.js"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>to-do</title>
   </head>
   <body>
@@ -11,7 +13,7 @@
     <h3>Profile</h3>
     <div class="profile">
       <p>Name : I Putu Esa Jayantika</p>
-      <p>Position : CEO</p>
+      <p>Position : Raja Cengkeh</p>
     </div>
     <div class="time">
       <strong>Today :</strong>
@@ -36,9 +38,12 @@
         <input id="priorlow" type="radio" name="priority" value="Low" />
         <label for="priorlow">Low</label>
       </div>
-      <button id="btn-addactivity" type="submit">Add Activity</button>
+      <button id="btn-addactivity" type="submit">Add Task</button>
     </form>
-
-    <div class="todo-list">This is your To Do List</div>
+    <div class="content-todo">
+      <div class="todo-list">My To Do List</div>
+      <div class="done-list">Finished Task</div>
+    </div>
+    <button id="btn-delall" type="button">Delete All Task</button>
   </body>
 </html>
