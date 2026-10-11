@@ -1,0 +1,113 @@
+.content-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.titletodo {
+  border: none;
+  background-color: #55ff55;
+  padding: 5px;
+}
+.todo-list h4 {
+  color: #ffaa00;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px #000000;
+}
+.todo-data {
+  display: flex;
+  flex-direction: column;
+  color: #ffaa00;
+  border: 1px solid #ccc;
+  padding: 8px;
+  gap: 10px;
+}
+
+.quest {
+  font-size: 21px;
+}
+
+.btn-delete {
+  height: 30px;
+  width: auto;
+  background-color: #aa0000;
+  color: white;
+  border: 2px solid #550000;
+}
+/* kalau klik check box maka data todo kecoret */
+.todo-data.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.done-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.titledone {
+  border: none;
+  background-color: #2a3b4c;
+  padding: 5px;
+  border: 2px solid #1f2d3d;
+}
+.done-list h4 {
+  color: #79c0ff;
+  text-align: center;
+  font-weight: bold;
+}
+
+#btn-delall {
+  width: 100%;
+  height: 40px;
+  background-color: #2b2b2b;
+  color: #ff5555;
+  border: 2px solid #aa0000;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  gap: 2px;
+  margin-top: 15px;
+  font-family: "Segoe UI";
+}
+
+@media (min-width: 1024px) {
+  .content-todo {
+    grid-area: list;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  #btn-delall {
+    grid-area: del;
+    justify-self: end;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+}

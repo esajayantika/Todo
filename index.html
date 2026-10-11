@@ -3,47 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
-    <script src="todolist.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <script src="./Js/script.js"></script>
+    <script src="./Js/todolist.js"></script>
+    <link rel="stylesheet" href="./Style/style.css" />
+    <link rel="stylesheet" href="./Style/todolist.css" />
     <title>to-do</title>
   </head>
   <body>
-    <h1>What To Do Today?</h1>
-    <h3>Profile</h3>
-    <div class="profile">
-      <p>Name : I Putu Esa Jayantika</p>
-      <p>Position : Raja Cengkeh</p>
-    </div>
+    <h1>Upcoming Crafting Quests</h1>
     <div class="time">
-      <strong>Today :</strong>
       <span id="live-clock">Loading live date...</span>
     </div>
-    <form>
-      <label for="todo">Add New Task :</label> <br />
-      <textarea name="todo" id="todo"></textarea>
+    <div class="container">
+      <div class="left-panel">
+        <div class="profile">
+          <img src="Avatar.svg" alt="avatar-profile" />
+          <div class="profile-info">
+            <h3>Profile</h3>
+            <p>Name : Esa Jayantika</p>
+            <p>Position : CEO</p>
+          </div>
+        </div>
 
-      <div class="datetodo">
-        When to Do?
-        <input type="date" id="dateinput" />
+        <div class="quotes">
+          <h3>A Little Reminder</h3>
+          <p>
+            "You don't have to do everything. <br />
+            Just start with one thing"
+          </p>
+        </div>
       </div>
-      <div class="urgency">
-        <span>Priority :</span>
-        <input id="priorhigh" type="radio" name="priority" value="High" />
-        <label for="priorhigh">High</label>
 
-        <input id="priormed" type="radio" name="priority" value="Medium" />
-        <label for="priormed">Medium</label>
+      <form>
+        <label for="todo" class="add-task">Add New Quest :</label>
+        <textarea name="todo" id="todo" rows="4"></textarea>
+        <div class="datetodo">
+          <span>When to Do?</span>
+          <input type="date" id="dateinput" />
+        </div>
+        <div class="urgency">
+          <span>Priority :</span>
+          <input id="priorhigh" type="radio" name="priority" value="High" />
+          <label for="priorhigh">High</label>
 
-        <input id="priorlow" type="radio" name="priority" value="Low" />
-        <label for="priorlow">Low</label>
+          <input id="priormed" type="radio" name="priority" value="Medium" />
+          <label for="priormed">Medium</label>
+
+          <input id="priorlow" type="radio" name="priority" value="Low" />
+          <label for="priorlow">Low</label>
+        </div>
+        <button id="btn-addactivity" type="submit">Add Quest</button>
+      </form>
+      <div class="content-todo">
+        <div class="todo-list">
+          <span class="titletodo">
+            <h4>My Quests List</h4>
+          </span>
+        </div>
+        <div class="done-list">
+          <span class="titledone">
+            <h4>Finished Quests</h4>
+          </span>
+        </div>
       </div>
-      <button id="btn-addactivity" type="submit">Add Task</button>
-    </form>
-    <div class="content-todo">
-      <div class="todo-list">My To Do List</div>
-      <div class="done-list">Finished Task</div>
+      <button id="btn-delall" type="button">Delete All Quests</button>
     </div>
-    <button id="btn-delall" type="button">Delete All Task</button>
   </body>
 </html>
