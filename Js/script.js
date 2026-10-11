@@ -52,10 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const todoItem = `
     <div class="todo-data">
-      <span>${selectedDate}</span> <br>
-      <span>${todoData}</span>
-      <span>(<strong>${priorval}</strong>)</span>
-      <input type="checkbox">
+      <span>${selectedDate}</span>
+      <span class="quest">${todoData}</span>
+      <div class="statustodo"> 
+          <span>(<strong>${priorval}</strong>)</span>
+          <input type="checkbox">
+      </div>
       <button class="btn-delete">Delete</button>
     </div>`;
 
