@@ -103,7 +103,7 @@
   .content-todo {
     grid-area: list;
     display: grid;
-    align-items: start;
+    align-items: stretch;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
