@@ -41,22 +41,71 @@ body h1 {
   padding: 8px 20px;
   overflow: hidden;
   min-height: 0;
+  box-sizing: border-box;
 }
 
 .profile img {
-  display: block;
-  width: auto;
-  align-items: start;
-  height: 70px;
-  min-height: 0;
-  object-fit: contain;
-}
-.profile-info {
   display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #550000;
+}
+
+.profile-info {
+  display: none;
+}
+.profile-info.active {
+  display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 8px;
   padding: 10px;
   color: #ffaa00;
+}
+
+#btn-to-edit {
+  height: 20px;
+  background-color: #2a3b4c;
+  border: 2px solid #1f2d3d;
+  color: #79c0ff;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #a8a8a8;
+  border: 1px solid #f1f1f1;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+#btn-save {
+  height: 20px;
+  width: 100%;
+  background-color: #2a3b4c;
+  border: 2px solid #1f2d3d;
+  color: #79c0ff;
+  cursor: pointer;
+}
+
+#btn-cancel {
+  height: 20px;
+  width: 100%;
+  background-color: #aa0000;
+  color: white;
+  border: 2px solid #550000;
+  cursor: pointer;
 }
 
 .quotes {
@@ -161,7 +210,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 170px;
+    height: 168px;
     background-color: #3c3c3c;
     border: 1px solid #f1f1f1;
     border-radius: 10px;
