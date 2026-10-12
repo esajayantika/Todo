@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./Js/changeprofile.js"></script>
     <script src="./Js/script.js"></script>
     <script src="./Js/todolist.js"></script>
     <link rel="stylesheet" href="./Style/style.css" />
@@ -17,11 +18,27 @@
     <div class="container">
       <div class="left-panel">
         <div class="profile">
-          <img src="Avatar.svg" alt="avatar-profile" />
-          <div class="profile-info">
+          <img src="profile.svg" alt="avatar-profile" />
+          <!-- Profile 1 -->
+          <div id="page-home" class="profile-info active">
             <h3>Profile</h3>
-            <p>Name : Esa Jayantika</p>
-            <p>Position : CEO</p>
+            <p>Name : <span id="view-name">Esa Jayantika</span></p>
+            <p>Position : <span id="view-job">CEO</span></p>
+            <button id="btn-to-edit">Edit Profile</button>
+          </div>
+          <!-- Profile 2 -->
+          <div id="page-edit" class="profile-info">
+            <h3>Edit Profile</h3>
+            <div class="form-group">
+              <input type="text" id="input-name" placeholder="New Name" />
+            </div>
+            <div class="form-group">
+              <input type="text" id="input-job" placeholder="New Position" />
+            </div>
+            <div class="btn-group">
+              <button id="btn-save">Save</button>
+              <button id="btn-cancel" class="secondary">Cancel</button>
+            </div>
           </div>
         </div>
 
